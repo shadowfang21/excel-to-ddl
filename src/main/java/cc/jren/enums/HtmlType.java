@@ -7,8 +7,8 @@ import cc.jren.model.HtmlColumn;
 
 public enum HtmlType {
     
-    RADIO(typeStartsWith("Check")),
-    CHECK(typeStartsWith("Radio")),
+    CHECK(typeStartsWith("CHECK")),
+    RADIO(typeStartsWith("RADIO")),
     DROP(typeStartsWith("下拉選單")),
     NUMBER(typeStartsWith("數字")),
     DATE(typeStartsWith("日期")),

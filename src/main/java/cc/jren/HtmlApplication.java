@@ -39,6 +39,7 @@ public class HtmlApplication {
 			                HtmlColumn h = HtmlMapper.INSTANCE.toHtml(c);
 			                h.setJavaColumnName(CaseUtils.toCamelCase(h.getColumnName(), false, '_'));
 			                h.setHtmlDataType(HtmlType.find(h).name());
+			                System.out.println(h);
 			                return h;
 			            })
 			            .filter(s -> !s.isSkip())

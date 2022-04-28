@@ -33,6 +33,13 @@ public class HtmlColumn {
     
     private static final Pattern p = Pattern.compile("^(.*)(\\(.*(\\d{5,5}).*)$");
     
+    public String getNumberMax() {
+        return StringUtils.rightPad("", length, '9');
+    }
+    public String toDecimalMax() {
+        return StringUtils.rightPad("", length - decimal, '9') + "." + StringUtils.rightPad("", decimal, '9');
+    }
+    
     @lombok.ToString.Include
     public Integer getInputLength() {
         if (getTypeDesc().contains("字") && !getTypeDesc().contains("英")) {
